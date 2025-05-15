@@ -1,10 +1,9 @@
-# Travelling Salesman City-Tour Optimizer (Delhi Edition)
+Travelling Salesman City-Tour Optimizer (Delhi Edition)
 
 This Python project finds an optimized travel route through selected Delhi landmarks using classic Traveling Salesman Problem (TSP) heuristics. It reads places from a CSV, calculates distances with geodesic math, solves TSP with greedy algorithm, and exports results as GeoJSON for easy mapping.
 
----
 
-## Features
+Features
 
 - Reads places with latitude and longitude from a CSV file.
 - Computes accurate distances using the Haversine formula.
@@ -14,9 +13,8 @@ This Python project finds an optimized travel route through selected Delhi landm
 - Exports the route as a GeoJSON LineString, compatible with Google Maps and geojson.io.
 - Command-line interface for easy usage.
 
----
 
-## Setup & Installation
+Setup & Installation
 
 1. Install Python 3.7+ from [python.org](https://www.python.org/downloads/).
 2. Clone or download this project.
@@ -28,16 +26,15 @@ This Python project finds an optimized travel route through selected Delhi landm
    - `places.csv` (with Delhi landmarks)
 4. Use a virtual environment for dependency management.
 
----
 
-## Usage
+Usage
 
 Run the main script from the command line:
 
 ```bash
 python tsp.py --csv places.csv --start "India Gate" --roundtrip
 
-## Output
+Output
 1. After running the program, you will get:
 Console output showing the optimal tour and total distance, for example:
    
@@ -58,14 +55,11 @@ Route written to route.geojson.
 
 2. You can visualize this file on geojson.io by uploading it:
 
-
 This will display the connected path of the city tour on the map, helping you verify the optimized route visually.
 
 Visualization Instructions
 Go to geojson.io.
-
 Click Open > File... or drag and drop route.geojson.
-
 View your optimized route plotted on the map.
 
 
