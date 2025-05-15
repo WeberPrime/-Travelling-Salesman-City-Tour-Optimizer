@@ -1,6 +1,6 @@
 # Travelling Salesman City-Tour Optimizer (Delhi Edition)
 
-This Python project finds an optimized travel route through selected Delhi landmarks using classic Traveling Salesman Problem (TSP) heuristics. It reads places from a CSV, calculates distances with geodesic math, solves TSP with greedy, and exports results as GeoJSON for easy mapping.
+This Python project finds an optimized travel route through selected Delhi landmarks using classic Traveling Salesman Problem (TSP) heuristics. It reads places from a CSV, calculates distances with geodesic math, solves TSP with greedy algorithm, and exports results as GeoJSON for easy mapping.
 
 ---
 
