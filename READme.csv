@@ -1,0 +1,72 @@
+# Travelling Salesman City-Tour Optimizer (Delhi Edition)
+
+This Python project finds an optimized travel route through selected Delhi landmarks using classic Traveling Salesman Problem (TSP) heuristics. It reads places from a CSV, calculates distances with geodesic math, solves TSP with greedy + 2-opt algorithms, and exports results as GeoJSON for easy mapping.
+
+---
+
+## Features
+
+- Reads places with latitude and longitude from a CSV file.
+- Computes accurate distances using the Haversine formula.
+- Uses a greedy heuristic to build an initial route.
+- Applies 2-opt optimization to improve the route.
+- Supports roundtrip option to return to the starting location.
+- Exports the route as a GeoJSON LineString, compatible with Google Maps and geojson.io.
+- Command-line interface for easy usage.
+
+---
+
+## Setup & Installation
+
+1. Install Python 3.7+ from [python.org](https://www.python.org/downloads/).
+2. Clone or download this project.
+3. Make sure the following files exist in the folder:
+   - `tsp.py`
+   - `distance.py`
+   - `tsp_solver.py`
+   - `geojson_export.py`
+   - `places.csv` (with Delhi landmarks)
+4. Use a virtual environment for dependency management.
+
+---
+
+## Usage
+
+Run the main script from the command line:
+
+```bash
+python tsp.py --csv places.csv --start "India Gate" --roundtrip
+
+## Output
+1. After running the program, you will get:
+Console output showing the optimal tour and total distance, for example:
+   
+Optimal tour:
+1) India Gate
+2) Red Fort
+3) Connaught Place
+4) Jantar Mantar
+5) Rashtrapati Bhavan
+6) Lodhi Garden
+7) Humayun's Tomb
+8) Akshardham Temple
+9) Lotus Temple
+10) Qutub Minar
+11) India Gate
+Total distance: 46.29 km
+Route written to route.geojson. 
+
+2. You can visualize this file on geojson.io by uploading it:
+
+
+This will display the connected path of the city tour on the map, helping you verify the optimized route visually.
+
+Visualization Instructions
+Go to geojson.io.
+
+Click Open > File... or drag and drop route.geojson.
+
+View your optimized route plotted on the map.
+
+
+
